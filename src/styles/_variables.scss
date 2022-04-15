@@ -1,0 +1,21 @@
+$gradient-color: linear-gradient(black, rgb(104, 104, 104));
+
+$reverse-gradient-color: linear-gradient(rgb(104, 104, 104), black);
+
+$blue-gradient-color: linear-gradient(45deg, steelblue, darkgray);
+
+$terrain-color: linear-gradient(45deg, #be7a50d8, #a86741ce, #f5ad65ce);
+
+$orange-skin: linear-gradient(to right, orange, #fff7b5);
+
+$metalic-skin: linear-gradient(45deg, grey, white, grey);
+
+$mq-s-screen: 670px;
+
+$mq-md-screen: 1000px;
+
+$mq-xl-screen: 1200px;
+
+$bx-sh-lt: 0 0 5px 2px lightgrey;
+$bx-sh-bw: 0 0 3px 2px maroon;
+$bx-sh-og: 0 2px 6px 2px orange;

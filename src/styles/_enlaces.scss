@@ -1,0 +1,33 @@
+@import "./variables.scss";
+
+.pagina-enlaces > .bg {
+  opacity: 0.2;
+}
+
+.pagina-enlaces main {
+  flex-direction: column;
+  margin-bottom: 0em;
+  height: auto;
+}
+
+.reference {
+  margin-bottom: 2em;
+
+  background-image: $blue-gradient-color;
+  border-radius: 10px;
+
+  line-height: 2em;
+
+  .title {
+    background-color: steelblue;
+  }
+}
+
+hr {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.sandwich {
+  padding: 1em 2em;
+}

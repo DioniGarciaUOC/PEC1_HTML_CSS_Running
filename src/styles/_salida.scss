@@ -1,0 +1,227 @@
+@import "./variables.scss";
+
+.pagina-maraton {
+  .bg {
+    opacity: 0.2;
+  }
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.gallery-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  padding: 4em 0;
+
+  .picture-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 0.5em 2em;
+    height: 380px;
+    max-width: 380px;
+
+    box-shadow: 0 2px 4px 1px darkgrey;
+    border-radius: 8px;
+    border: 8px solid transparent;
+    background-color: white;
+
+    &-image {
+      width: 300px;
+      min-height: 300px;
+
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+
+      @media (max-device-width: $mq-s-screen) {
+        min-height: 580px;
+        width: 100%;
+      }
+    }
+
+    &-name {
+      margin: 0.25em 0 0;
+
+      font-size: 1.4rem;
+      font-weight: 600;
+
+      @media (max-device-width: $mq-s-screen) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &-tag {
+      margin-bottom: 4px;
+
+      font-size: 0.9em;
+
+      @media (max-device-width: $mq-s-screen) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-info {
+      max-width: 320px;
+      margin-top: 4px;
+      font-size: 0.8em;
+
+      text-align: center;
+    }
+
+    @media (max-device-width: $mq-s-screen) {
+      height: 680px;
+      max-width: 580px;
+
+      margin-bottom: 12em;
+    }
+  }
+
+  @media (max-device-width: $mq-s-screen) {
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding: 2em 0;
+  }
+}
+
+.wrong {
+  color: red;
+}
+
+.right {
+  color: green;
+}
+
+.info-aside {
+  display: flex;
+
+  @media (max-width: $mq-md-screen) {
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto 6em;
+  }
+
+  @media (max-device-width: $mq-s-screen) {
+    margin-bottom: 2em;
+  }
+}
+
+.art-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  padding: 2em;
+  margin-bottom: 4em;
+
+  border-radius: 10px;
+
+  box-shadow: $bx-sh-lt;
+  background-image: $terrain-color;
+
+  h2,
+  p {
+    margin-bottom: 1em;
+  }
+  .text {
+    margin-bottom: 2em;
+    min-width: 300px;
+    max-width: 700px;
+  }
+  iframe {
+    min-width: 300px;
+    margin-left: 2em;
+
+    border-radius: 0 20% 0 20%;
+
+    box-shadow: $bx-sh-bw;
+
+    @media (max-width: $mq-md-screen) {
+      max-width: 400px;
+      margin-left: 0;
+    }
+
+    @media (max-width: $mq-s-screen) {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  span {
+    font-style: italic;
+  }
+  @media (max-width: $mq-md-screen) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.info-maraton {
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    width: 100%;
+
+    flex-direction: column;
+    line-height: 2em;
+
+    li {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+  }
+}
+
+aside {
+  height: 330px;
+  min-width: 350px;
+
+  margin-left: 2em;
+  padding: 2em;
+
+  border-radius: 30px;
+
+  background-image: $gradient-color;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    line-height: 2.5em;
+  }
+
+  a {
+    font-size: 1.2rem;
+
+    &:hover {
+      color: orange;
+    }
+
+    @media (max-device-width: $mq-s-screen) {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-device-width: $mq-s-screen) {
+    width: 100%;
+    height: auto;
+
+    margin-left: 0;
+
+    font-size: 1.5rem;
+  }
+}

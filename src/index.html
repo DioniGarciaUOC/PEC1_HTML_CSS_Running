@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is a homepage" />
+    <link rel="shortcut icon" href="./assets/img/icons/running-icon.png" type="image/x-icon" />
+    <title>PEC1 HTMLCSS Tooling</title>
+    <link rel="stylesheet" href="./styles/main.scss" />
+  </head>
+
+  <body class="landing-page">
+    <img class="bg" src="./assets/img/bg/home-bg-img.jpg" />
+
+    <include src="./views/header.html"></include>
+
+    <main>
+      <article class="home-left-content">
+        <h1>¡ Sígueme en mi pasión por las maratones 42K de montaña !</h1>
+
+        <img class="man-running-svg" src="./assets/img/svg/man-running.svg" alt="Draw man running" width="550" />
+      </article>
+
+      <article class="js-interaction">
+        <form action="">
+          <h4>¡ Déjame un mensaje de apoyo !</h4>
+
+          <label for="user-name">Nombre:</label>
+          <input type="text" id="user-name" placeholder="Escribe tu nombre" />
+
+          <label for="msg-txt">Mensaje:</label>
+          <input type="text" id="msg-txt" placeholder="Escribe tu mensaje" />
+
+          <input type="submit" value="Enviar" id="submitButton" />
+        </form>
+      </article>
+    </main>
+
+    <div id="msg-cnt"></div>
+
+    <include src="./views/footer.html"></include>
+
+    <script src="./app/app.js"></script>
+  </body>
+</html>

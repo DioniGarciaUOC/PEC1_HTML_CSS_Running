@@ -1,0 +1,193 @@
+@import "./variables.scss";
+
+.pagina-maratones main {
+  height: auto;
+}
+
+img.bg {
+  opacity: 1;
+}
+
+.maraton {
+  width: 800px;
+
+  margin-bottom: 2em;
+  padding: 1em;
+
+  border-radius: 5px;
+
+  box-shadow: $bx-sh-lt;
+  background-image: $blue-gradient-color;
+
+  transition: 0.3s all;
+
+  &:hover {
+    box-shadow: bx-sh-og;
+    cursor: pointer;
+    background-image: $orange-skin;
+  }
+
+  @media (max-width: $mq-md-screen) {
+    width: 500px;
+  }
+
+  @media (max-device-width: $mq-s-screen) {
+    width: 100%;
+  }
+}
+
+.contenedor-maratones a {
+  text-decoration: none;
+
+  @media (max-device-width: $mq-s-screen) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.pagina-maratones main {
+  flex-direction: column;
+
+  padding: 0 4em;
+  margin-bottom: 4em;
+
+  h1 {
+    margin: 2em auto;
+  }
+
+  @media (max-device-width: $mq-s-screen) {
+    margin-bottom: 4em;
+  }
+}
+
+.contenedor-maratones {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+.maraton-titulo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-bottom: 1em;
+
+  p {
+    font-size: 2.2rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+
+  .temps {
+    display: flex;
+    justify-content: space-around;
+
+    .current {
+      margin: auto;
+      font-size: 2.2rem;
+
+      @media (max-width: $mq-md-screen) {
+        font-size: 1.8rem;
+      }
+    }
+    .min-max {
+      margin-left: 1em;
+
+      font-size: 1.5rem;
+
+      .min {
+        color: cyan;
+      }
+      .max {
+        color: red;
+      }
+
+      @media (max-width: $mq-md-screen) {
+        font-size: 1.2rem;
+      }
+
+      @media (max-device-width: $mq-s-screen) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+hr {
+  text-shadow: none;
+  color: black;
+  margin: 1em 0;
+}
+.dashboard-up {
+  display: flex;
+  justify-content: space-around;
+
+  margin-bottom: 0.5em;
+
+  .tiempo,
+  .desnivel,
+  .temperatura {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 40px;
+    width: 140px;
+  }
+
+  @media (max-device-width: $mq-s-screen) {
+    font-size: 1.5rem;
+  }
+}
+
+table {
+  width: 100%;
+
+  th,
+  td {
+    text-align: center;
+  }
+
+  td {
+    width: calc(100% / 3);
+  }
+
+  @media (max-device-width: $mq-s-screen) {
+    font-size: 1.8rem;
+  }
+}
+
+#animated {
+  animation: blinker 4s linear infinite;
+  animation-play-state: running;
+  text-decoration: none;
+}
+
+@keyframes blinker {
+  0% {
+    box-shadow: 0 2px 8px 4px red;
+  }
+  15% {
+    box-shadow: none;
+  }
+  30% {
+    box-shadow: 0 2px 8px 4px red;
+  }
+  45% {
+    box-shadow: none;
+  }
+  60% {
+    box-shadow: 0 2px 8px 4px red;
+  }
+  75% {
+    box-shadow: none;
+  }
+  90% {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is a homepage" />
+    <link rel="shortcut icon" href="./assets/img/icons/running-icon.png"" type="image/x-icon" />
+    <title>PEC1 HTMLCSS Tooling</title>
+    <link rel="stylesheet" href="./styles/main.scss" />
+    <script type="module" src="./app/app.js"></script>
+  </head>
+
+  <body class="pagina-presentacion">
+    <img class="bg" src="./assets/img/bg/forest.jpg" />
+    <main>
+      <article class="about-me">
+        <h1>Sobre mi:</h1>
+
+        <div class="erik-photo"></div>
+
+        <div class="personal-info">
+          <p><span>Nombre: </span> Erik Johnson</p>
+
+          <p><span>Edad: </span>27 años</p>
+
+          <p><span>Aficiones: </span>Las maratones, la natación, ver series y la micología.</p>
+
+          <p><span>Trabajo: </span> Controlador aéreo (Aeropuerto de Barajas)</p>
+
+          <p><span>Email: </span> erik@maratones.es</p>
+        </div>
+
+        <h2>Sígueme en RRSS:</h2>
+
+        <div class="social-networks">
+          <a href="#">
+            <i class="fa-brands fa-facebook-square"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-twitter-square"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-google-plus-g"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="explanation">
+        <h3>Mis raices como maratoniano:</h3>
+        <p>
+          Soy la tercera generación de corredores de maratones en mi familia. Mi abuelo Zhang-lee-Johnson era corredor de maratones. Mi padre,
+          Lue-lee-Johnson me ha inculcado la pasión y tesón de mi abuelo en este apasionante mundo. Como no podía ser de otra manera, trato de llenar
+          mi vida con otras aficiones y el tiempo que paso con mi familia.
+        </p>
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/iK4EhDGELCk"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <h3>La asociación:</h3>
+        <p>
+          Pertenezco a <cite>Corredores sin excusas</cite>, asociación de carreras de montañas con más de 200 miembros, fundada en 1976 por el
+          Dr.Rafael Del Río en Alcalá de Heneres. Realizamos entrenamientos semanales y preparamos a todo aquel que quiera hacer frente a una prueba
+          física tan dura como lo es una maratón por montaña.
+        </p>
+
+        <h3>Sobre la web:</h3>
+        <p>
+          Me pongo a disposición de grupos para realizar actividades formativas, así como para dar conferencias en eventos. ¡ No dudéis en escribirme
+          al correo para cualquir consulta !
+        </p>
+      </article>
+    </main>
+
+    <include src="./views/footer.html"></include>
+  </body>
+</html>
