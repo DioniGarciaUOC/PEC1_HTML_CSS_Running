@@ -15,6 +15,15 @@ h1 {
 }
 
 .gallery-block {
+  h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5em;
+
+    @media (max-device-width: $mq-s-screen) {
+      font-size: 3rem;
+    }
+  }
   display: flex;
   flex-direction: row;
   justify-content: space-around;

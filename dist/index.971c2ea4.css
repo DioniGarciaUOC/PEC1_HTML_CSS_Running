@@ -8666,6 +8666,18 @@ h1 {
   display: flex;
 }
 
+.gallery-block h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+@media (max-device-width: 670px) {
+  .gallery-block h2 {
+    font-size: 3rem;
+  }
+}
+
 .gallery-block .picture-item {
   height: 380px;
   max-width: 380px;
