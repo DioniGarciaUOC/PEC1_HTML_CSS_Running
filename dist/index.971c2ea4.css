@@ -8559,53 +8559,12 @@ img.bg {
   display: flex;
 }
 
-.maraton-titulo p {
+.maraton-titulo h2 {
   font-size: 2.2rem;
 }
 
 .maraton-titulo span {
   font-size: 1.5rem;
-}
-
-.maraton-titulo .temps {
-  justify-content: space-around;
-  display: flex;
-}
-
-.maraton-titulo .temps .current {
-  margin: auto;
-  font-size: 2.2rem;
-}
-
-@media (max-width: 1000px) {
-  .maraton-titulo .temps .current {
-    font-size: 1.8rem;
-  }
-}
-
-.maraton-titulo .temps .min-max {
-  margin-left: 1em;
-  font-size: 1.5rem;
-}
-
-.maraton-titulo .temps .min-max .min {
-  color: #0ff;
-}
-
-.maraton-titulo .temps .min-max .max {
-  color: red;
-}
-
-@media (max-width: 1000px) {
-  .maraton-titulo .temps .min-max {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-device-width: 670px) {
-  .maraton-titulo .temps .min-max {
-    font-size: 2rem;
-  }
 }
 
 hr {
@@ -8622,7 +8581,7 @@ hr {
 
 .dashboard-up .tiempo, .dashboard-up .desnivel, .dashboard-up .temperatura {
   height: 40px;
-  width: 140px;
+  width: 170px;
   justify-content: space-around;
   align-items: center;
   display: flex;
@@ -8630,7 +8589,7 @@ hr {
 
 @media (max-device-width: 670px) {
   .dashboard-up {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 

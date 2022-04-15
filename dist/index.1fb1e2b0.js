@@ -1,5 +1,5 @@
 // Form controls
-const submitBtn = document.getElementById("submitButton");
+const submitBtn = document.getElementById("submit-btn");
 const input_email = document.getElementById("user-name");
 const input_msg = document.getElementById("msg-txt");
 // div messaging

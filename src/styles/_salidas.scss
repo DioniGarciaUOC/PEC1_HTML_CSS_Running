@@ -75,46 +75,12 @@ img.bg {
 
   margin-bottom: 1em;
 
-  p {
+  h2 {
     font-size: 2.2rem;
   }
 
   span {
     font-size: 1.5rem;
-  }
-
-  .temps {
-    display: flex;
-    justify-content: space-around;
-
-    .current {
-      margin: auto;
-      font-size: 2.2rem;
-
-      @media (max-width: $mq-md-screen) {
-        font-size: 1.8rem;
-      }
-    }
-    .min-max {
-      margin-left: 1em;
-
-      font-size: 1.5rem;
-
-      .min {
-        color: cyan;
-      }
-      .max {
-        color: red;
-      }
-
-      @media (max-width: $mq-md-screen) {
-        font-size: 1.2rem;
-      }
-
-      @media (max-device-width: $mq-s-screen) {
-        font-size: 2rem;
-      }
-    }
   }
 }
 
@@ -135,13 +101,12 @@ hr {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     height: 40px;
-    width: 140px;
+    width: 170px;
   }
 
   @media (max-device-width: $mq-s-screen) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 

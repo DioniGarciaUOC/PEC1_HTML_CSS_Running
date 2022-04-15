@@ -1,7 +1,7 @@
 {
   "name": "MyBoiler",
   "version": "1.0.0",
-  "description": "My Boiler form scratch",
+  "description": "My Boiler from scratch",
   "source": "./src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {

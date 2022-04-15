@@ -515,7 +515,7 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"4banG":[function(require,module,exports) {
 // Form controls
-const submitBtn = document.getElementById("submitButton");
+const submitBtn = document.getElementById("submit-btn");
 const input_email = document.getElementById("user-name");
 const input_msg = document.getElementById("msg-txt");
 // div messaging
