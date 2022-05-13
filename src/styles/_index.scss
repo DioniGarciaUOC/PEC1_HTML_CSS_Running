@@ -10,20 +10,23 @@
 }
 
 /********************************/
-/*  HEADINGS                   **/
+//       HEADER
 /********************************/
 
 h1 {
   font-size: 4rem;
   margin-bottom: 1em;
+  transition: 0.3s font-size;
 }
 
 header {
+  //border: 2px solid lime;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 2em 3em 2em 2em;
+  height: 6em;
+  padding: 0 3em;
 
   background-image: $gradient-color;
   box-shadow: $bx-sh-lt;
@@ -31,31 +34,49 @@ header {
   transition: all 0.3s;
 
   @media (max-width: $mq-md-screen) {
+    height: auto;
     flex-direction: column;
+    border: 2px solid orange;
   }
 
-  @media (max-device-width: $mq-md-screen) {
+  @media (max-device-width: $mq-s-screen) {
+    border: 2px solid red;
     padding-top: 3em;
   }
 }
 
 /********************************/
-/*  LOGO                       **/
+//      Estilos del LOGO
 /********************************/
-.logoNav {
+
+//Enlace exterior logo <a>
+.home-link {
+  display: block;
   height: 50px;
-  width: 600px;
+  width: 500px;
+  //border: 2px dotted pink; // REMOVEME
+  @media (max-width: $mq-md-screen) {
+    margin-bottom: 1em;
+  }
+}
+
+.logo-container {
+  //border: 4px solid blue; // REMOVEME
+
+  height: 50px;
+  width: 500px;
 
   position: relative;
 
   .runner-logo {
-    filter: invert(100%);
     position: absolute;
     top: -20px;
+    animation: runner-move linear 8s infinite;
+    filter: invert(100%);
 
     @media (max-width: $mq-md-screen) {
       top: -40px;
-      left: -90px;
+      left: -50px;
       height: 100px;
     }
 
@@ -69,23 +90,25 @@ header {
   .text-logo {
     position: absolute;
     top: 10px;
-    left: 55px;
+    left: 10px;
 
     @media (max-width: $mq-md-screen) {
-      height: 50px;
-      left: -50px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 45px;
+      left: -25px;
     }
 
     @media (max-device-width: $mq-s-screen) {
-      height: 70px;
-      left: 35px;
-      top: 0px;
+      width: 100%;
+      height: 3em;
+      left: 0;
+      top: 0;
     }
   }
 
   @media (max-width: $mq-md-screen) {
     margin: 1em auto;
-    width: 500px;
   }
 
   @media (max-device-width: $mq-s-screen) {
@@ -94,21 +117,25 @@ header {
   }
 }
 
+// Get smaller logo on footer
+footer .home-link {
+  transform: scale(80%);
+}
+
 /********************************/
 /*  NAV-LINKS                   **/
 /********************************/
 ul {
+  //border: 2px solid red; //REMOVEME
   display: flex;
   justify-content: space-between;
-
-  margin-top: 2em;
-  width: 350px;
 
   li {
     list-style: none;
   }
 
   a {
+    margin: 0 1em;
     color: white;
     text-decoration: none;
 
@@ -155,8 +182,6 @@ img.bg {
   z-index: -1;
 
   object-fit: cover;
-
-  opacity: 1;
 }
 
 /********************************/
@@ -164,8 +189,9 @@ img.bg {
 /********************************/
 
 main {
+  //border: 8px solid purple; //REMOVEME
   display: flex;
-  height: 750px;
+  height: calc(100vh - 12em);
   justify-content: space-between;
 
   padding: 4.5em 8em;
@@ -303,13 +329,16 @@ form {
 /***************************/
 
 footer {
+  border: 4px solid lime;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   z-index: 5;
 
-  padding: 1.5em 4em;
+  height: 6em;
+
+  padding-right: 4em;
 
   background-image: $reverse-gradient-color;
   box-shadow: $bx-sh-lt;
@@ -346,8 +375,10 @@ footer {
   }
 
   .nav-item {
+    display: flex;
     justify-content: space-between;
-    line-height: 2.5rem;
+    align-items: center;
+    //line-height: 2.5rem;
     box-shadow: none;
 
     background-image: none;
@@ -362,10 +393,22 @@ footer {
   }
 
   @media (max-width: $mq-md-screen) {
+    height: auto;
     padding: 2em 4em 1.5em;
     flex-direction: column;
+    border: 4px solid orange;
+  }
+
+  @media (max-device-width: $mq-s-screen) {
+    padding: 2em 4em 1.5em;
+    flex-direction: column;
+    border: 4px solid red;
   }
 }
+
+/***************************/
+//       Animación del mensaje JS
+/***************************/
 
 #msg-cnt {
   display: flex;
@@ -424,5 +467,83 @@ footer {
   100% {
     opacity: 0;
     left: 0;
+  }
+}
+
+/***********************/
+//       Animación SVG corredor
+/***********************/
+
+.front-leg {
+  transform-box: fill-box;
+  animation: front-leg-move linear 1.5s infinite;
+}
+
+.rear-leg {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: rear-leg-move linear 1.5s infinite;
+}
+
+.sweat {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: sweating ease-in-out 1.5s infinite;
+}
+
+@keyframes front-leg-move {
+  0% {
+    transform: rotate(-10deg) translate(-20px, 0px);
+  }
+  50% {
+    transform: rotate(85deg) translate(-10px, -60px);
+  }
+  100% {
+    transform: rotate(-15deg) translate(-20px, 0px);
+  }
+}
+
+@keyframes rear-leg-move {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-80deg) translate(0px, 180px);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/***********************/
+//       Animación icono corredor logo
+/***********************/
+
+@keyframes runner-move {
+  0% {
+    transform: translateX(0px) scale(20%);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateX(16em) scale(80%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(28em) scale(10%);
+    opacity: 0;
+  }
+}
+
+@keyframes sweating {
+  from {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0px, 35px);
+    opacity: 1;
   }
 }

@@ -22,7 +22,6 @@ img.bg {
   transition: 0.3s all;
 
   &:hover {
-    box-shadow: bx-sh-og;
     cursor: pointer;
     background-image: $orange-skin;
   }
@@ -34,6 +33,10 @@ img.bg {
   @media (max-device-width: $mq-s-screen) {
     width: 100%;
   }
+}
+
+.maraton:nth-child(1) {
+  box-shadow: none;
 }
 
 .contenedor-maratones a {
@@ -135,22 +138,22 @@ table {
 
 @keyframes blinker {
   0% {
-    box-shadow: 0 2px 8px 4px red;
+    box-shadow: none;
   }
   15% {
-    box-shadow: none;
+    box-shadow: 0 2px 8px 4px red;
   }
   30% {
-    box-shadow: 0 2px 8px 4px red;
+    box-shadow: none;
   }
   45% {
-    box-shadow: none;
-  }
-  60% {
     box-shadow: 0 2px 8px 4px red;
   }
-  75% {
+  60% {
     box-shadow: none;
+  }
+  75% {
+    box-shadow: 0 2px 8px 4px red;
   }
   90% {
     box-shadow: none;
