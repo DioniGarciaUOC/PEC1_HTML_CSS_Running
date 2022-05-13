@@ -104,6 +104,29 @@ h1 {
   }
 }
 
+.art-imagen-destacada {
+  h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5em;
+
+    @media (max-device-width: $mq-s-screen) {
+      font-size: 3rem;
+    }
+  }
+
+  .imagen-destacada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .elemento-imagen {
+      box-shadow: 0 0 12px grey;
+      border-radius: 10px;
+    }
+  }
+}
+
 .wrong {
   color: red;
 }
@@ -120,6 +143,7 @@ h1 {
     align-items: center;
 
     margin: auto 6em;
+    margin-bottom: 2em;
   }
 
   @media (max-device-width: $mq-s-screen) {
@@ -225,11 +249,13 @@ aside {
     }
   }
 
+  @media (max-width: $mq-md-screen) {
+    margin-left: 0;
+  }
+
   @media (max-device-width: $mq-s-screen) {
     width: 100%;
     height: auto;
-
-    margin-left: 0;
 
     font-size: 1.5rem;
   }

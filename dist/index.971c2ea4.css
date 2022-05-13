@@ -8023,14 +8023,12 @@ header {
 @media (max-width: 1000px) {
   header {
     height: auto;
-    border: 2px solid orange;
     flex-direction: column;
   }
 }
 
 @media (max-device-width: 670px) {
   header {
-    border: 2px solid red;
     padding-top: 3em;
   }
 }
@@ -8309,7 +8307,6 @@ footer {
   height: 6em;
   color: #fff;
   background-image: linear-gradient(#686868, #000);
-  border: 4px solid #0f0;
   justify-content: space-between;
   align-items: center;
   padding-right: 4em;
@@ -8372,7 +8369,6 @@ footer .nav-item a {
 @media (max-width: 1000px) {
   footer {
     height: auto;
-    border: 4px solid orange;
     flex-direction: column;
     padding: 2em 4em 1.5em;
   }
@@ -8380,7 +8376,6 @@ footer .nav-item a {
 
 @media (max-device-width: 670px) {
   footer {
-    border: 4px solid red;
     flex-direction: column;
     padding: 2em 4em 1.5em;
   }
@@ -9146,6 +9141,29 @@ h1 {
   }
 }
 
+.art-imagen-destacada h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+@media (max-device-width: 670px) {
+  .art-imagen-destacada h2 {
+    font-size: 3rem;
+  }
+}
+
+.art-imagen-destacada .imagen-destacada {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.art-imagen-destacada .imagen-destacada .elemento-imagen {
+  border-radius: 10px;
+  box-shadow: 0 0 12px gray;
+}
+
 .wrong {
   color: red;
 }
@@ -9162,7 +9180,7 @@ h1 {
   .info-aside {
     flex-direction: column;
     align-items: center;
-    margin: auto 6em;
+    margin: auto 6em 2em;
   }
 }
 
@@ -9271,11 +9289,16 @@ aside a:hover {
   }
 }
 
+@media (max-width: 1000px) {
+  aside {
+    margin-left: 0;
+  }
+}
+
 @media (max-device-width: 670px) {
   aside {
     width: 100%;
     height: auto;
-    margin-left: 0;
     font-size: 1.5rem;
   }
 }

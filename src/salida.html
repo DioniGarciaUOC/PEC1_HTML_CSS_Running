@@ -70,6 +70,23 @@
         </aside>
       </div>
 
+      <article class="art-imagen-destacada">
+        <h2>Imagen destacada</h2>
+
+        <picture class="imagen-destacada">
+          <source media="(min-width: 1260px)" srcset="assets/img/destacada/destacada-grande.jpg 2400w" sizes="70vw" />
+          <source
+            media="(min-width: 960px)"
+            srcset="assets/img/destacada/destacada-medio.jpg 1920w, assets/img/destacada/destacada-pequeño.jpg 640w"
+            sizes="70vw"
+          />
+          <source media="(min-width: 560px)" srcset="assets/img/destacada/destacada-crop-medio.webp 689w" sizes="60vw" />
+
+          <source media="(min-width: 360px)" srcset="assets/img/destacada/destacada-crop-medio.webp 689w" sizes="60vw" />
+
+          <img class="elemento-imagen" src="assets/img/destacada/destacada-original-marca-agua.jpg" alt="Un corredor motivado" />
+        </picture>
+      </article>
       <article class="gallery-block">
         <h2>Algunos tips interesantes</h2>
         <div class="picture-item">
@@ -85,9 +102,21 @@
         </div>
 
         <div class="picture-item">
-          <img class="picture-item-image" src="./assets/img/tips/Tie-gently.jpg" alt="Ata los cordones gentil" />
+          <img class="picture-item-image" src="./assets/img/tips/Tie-gently.jpg" alt="Persona atándose los cordones" />
           <span class="picture-item-name">Ata firme pero gentilmente</span>
           <span class="picture-item-tag right">Asegura el calzado</span>
+        </div>
+
+        <div class="picture-item">
+          <img class="picture-item-image" src="./assets/img/tips/cr-train-everyday.jpg" alt="Corredor con piernas entrenadas" />
+          <span class="picture-item-name">Entrena todos los dias</span>
+          <span class="picture-item-tag right">Haz almenos un poco a diario</span>
+        </div>
+
+        <div class="picture-item">
+          <img class="picture-item-image" src="./assets/img/tips/cr-multiple-exercises.jpg" alt="Hombre haciendo deporte en unas escaleras" />
+          <span class="picture-item-name">Varia el tipo de ejercicio</span>
+          <span class="picture-item-tag wrong">No castigues los mismos músculos</span>
         </div>
       </article>
     </main>

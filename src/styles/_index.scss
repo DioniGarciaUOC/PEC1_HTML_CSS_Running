@@ -20,7 +20,6 @@ h1 {
 }
 
 header {
-  //border: 2px solid lime;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,11 +35,9 @@ header {
   @media (max-width: $mq-md-screen) {
     height: auto;
     flex-direction: column;
-    border: 2px solid orange;
   }
 
   @media (max-device-width: $mq-s-screen) {
-    border: 2px solid red;
     padding-top: 3em;
   }
 }
@@ -329,7 +326,6 @@ form {
 /***************************/
 
 footer {
-  border: 4px solid lime;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -396,13 +392,11 @@ footer {
     height: auto;
     padding: 2em 4em 1.5em;
     flex-direction: column;
-    border: 4px solid orange;
   }
 
   @media (max-device-width: $mq-s-screen) {
     padding: 2em 4em 1.5em;
     flex-direction: column;
-    border: 4px solid red;
   }
 }
 
