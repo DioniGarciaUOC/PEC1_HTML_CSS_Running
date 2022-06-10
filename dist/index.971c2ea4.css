@@ -8010,6 +8010,7 @@ h1 {
 }
 
 header {
+  z-index: 10;
   height: 6em;
   background-image: linear-gradient(#000, #686868);
   justify-content: space-between;
@@ -8017,6 +8018,7 @@ header {
   padding: 0 3em;
   transition: all .3s;
   display: flex;
+  position: relative;
   box-shadow: 0 0 5px 2px #d3d3d3;
 }
 
@@ -8075,9 +8077,15 @@ header {
 }
 
 .logo-container .text-logo {
+  filter: drop-shadow(0 0 .15rem orange);
+  transition: all .3s;
   position: absolute;
   top: 10px;
   left: 10px;
+}
+
+.logo-container .text-logo:hover {
+  filter: drop-shadow(0 0 .35rem orange);
 }
 
 @media (max-width: 1000px) {
@@ -8303,7 +8311,7 @@ form [type="text"]::placeholder {
 }
 
 footer {
-  z-index: 5;
+  z-index: 10;
   height: 6em;
   color: #fff;
   background-image: linear-gradient(#686868, #000);
@@ -8311,6 +8319,7 @@ footer {
   align-items: center;
   padding-right: 4em;
   display: flex;
+  position: relative;
   box-shadow: 0 0 5px 2px #d3d3d3;
 }
 
@@ -8625,7 +8634,7 @@ footer .nav-item a {
   width: 280px;
   height: 280px;
   clip-path: polygon(50% 0%, 66% 26%, 98% 35%, 77% 60%, 79% 91%, 50% 74%, 21% 91%, 23% 59%, 2% 35%, 33% 28%);
-  background-image: url("erik-johnson.3c4fa1c1.jpeg");
+  background-image: url("erik-johnson_end.ff699da8.webp");
   background-position: 55% 55%;
   background-size: cover;
   margin: -1em auto 2em;

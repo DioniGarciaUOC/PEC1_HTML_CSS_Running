@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="description" content="This is a homepage" />
-    <link rel="shortcut icon" href="./assets/img/icons/running-icon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/img/svg/running-icon.svg" type="image/x-icon" />
     <title>PEC1 HTMLCSS Tooling</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="./styles/main.scss" />
-    <script type="module" src="./app/app.js"></script>
   </head>
 
   <body class="pagina-maraton">
-    <img class="bg" src="./assets/img/bg/forest.jpg" alt="Imagen de fondo de bosque" />
+    <img class="bg" src="./assets/img/bg/forest.webp" alt="Imagen de fondo de bosque" />
     <main>
       <h1>Maratón circular a Adzeneta</h1>
 
@@ -40,6 +42,7 @@
           src="https://www.wikiloc.com/wikiloc/spatialArtifacts.do?event=view&id=6864461&measures=off&title=off&near=off&images=off&maptype=H"
           width="500"
           height="500"
+          loading="lazy"
         ></iframe>
       </article>
 
@@ -84,37 +87,42 @@
 
           <source media="(min-width: 360px)" srcset="assets/img/destacada/destacada-crop-medio.webp 689w" sizes="60vw" />
 
-          <img class="elemento-imagen" src="assets/img/destacada/destacada-original-marca-agua.jpg" alt="Un corredor motivado" />
+          <img loading="lazy" class="elemento-imagen" src="assets/img/destacada/destacada-original-marca-agua.jpg" alt="Un corredor motivado" />
         </picture>
       </article>
       <article class="gallery-block">
         <h2>Algunos tips interesantes</h2>
         <div class="picture-item">
-          <img class="picture-item-image" src="./assets/img/tips/Check-soles.jpg" alt="Verifica tus suelas" />
+          <img loading="lazy" class="picture-item-image" src="./assets/img/tips/Check-soles.webp" alt="Verifica tus suelas" />
           <span class="picture-item-name">Verifica tus suelas a menudo</span>
           <span class="picture-item-tag right">Usa buen calzado</span>
         </div>
 
         <div class="picture-item">
-          <img class="picture-item-image" src="./assets/img/tips/Stay-concentrated.jpg" alt="Concentración en la pisada" />
+          <img loading="lazy" class="picture-item-image" src="./assets/img/tips/Stay-concentrated.webp" alt="Concentración en la pisada" />
           <span class="picture-item-name">Concentrate en la pisada</span>
           <span class="picture-item-tag wrong">Evita lesiones como torceduras</span>
         </div>
 
         <div class="picture-item">
-          <img class="picture-item-image" src="./assets/img/tips/Tie-gently.jpg" alt="Persona atándose los cordones" />
+          <img loading="lazy" class="picture-item-image" src="./assets/img/tips/Tie-gently.webp" alt="Persona atándose los cordones" />
           <span class="picture-item-name">Ata firme pero gentilmente</span>
           <span class="picture-item-tag right">Asegura el calzado</span>
         </div>
 
         <div class="picture-item">
-          <img class="picture-item-image" src="./assets/img/tips/cr-train-everyday.jpg" alt="Corredor con piernas entrenadas" />
+          <img loading="lazy" class="picture-item-image" src="./assets/img/tips/cr-train-everyday.webp" alt="Corredor con piernas entrenadas" />
           <span class="picture-item-name">Entrena todos los dias</span>
           <span class="picture-item-tag right">Haz almenos un poco a diario</span>
         </div>
 
         <div class="picture-item">
-          <img class="picture-item-image" src="./assets/img/tips/cr-multiple-exercises.jpg" alt="Hombre haciendo deporte en unas escaleras" />
+          <img
+            loading="lazy"
+            class="picture-item-image"
+            src="./assets/img/tips/cr-multiple-exercises.webp"
+            alt="Hombre haciendo deporte en unas escaleras"
+          />
           <span class="picture-item-name">Varia el tipo de ejercicio</span>
           <span class="picture-item-tag wrong">No castigues los mismos músculos</span>
         </div>

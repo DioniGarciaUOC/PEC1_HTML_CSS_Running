@@ -20,6 +20,8 @@ h1 {
 }
 
 header {
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,9 +87,16 @@ header {
   }
 
   .text-logo {
+    filter: drop-shadow(0 0 0.15rem orange);
     position: absolute;
     top: 10px;
     left: 10px;
+
+    transition: all 0.3s;
+
+    &:hover {
+      filter: drop-shadow(0 0 0.35rem orange);
+    }
 
     @media (max-width: $mq-md-screen) {
       margin-left: auto;
@@ -326,11 +335,11 @@ form {
 /***************************/
 
 footer {
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  z-index: 5;
 
   height: 6em;
 
