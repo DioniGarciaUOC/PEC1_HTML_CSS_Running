@@ -10,7 +10,11 @@
   </head>
 
   <body class="landing-page">
-    <img class="bg" src="/home.6b40127c.webp" alt="Imagen de fondo de corredor">
+    <picture class="bg">
+      <source srcset="/home.6b40127c.webp" media="(min-width: 568px)">
+      <img loading="lazy" class="bg" src="/home-mobile.2d52d0fb.webp" alt="Runner on the screen">
+    </picture>
+    <!--<img loading="lazy" class="bg" src="./assets/img/bg/home.webp" alt="Imagen de fondo de corredor" />-->
 
     <header>
   <a href="/index.html" class="home-link">
