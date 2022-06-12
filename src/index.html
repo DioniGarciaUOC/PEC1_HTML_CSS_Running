@@ -5,7 +5,408 @@
     <meta name="description" content="This is a homepage" />
     <link rel="shortcut icon" href="./assets/img/icons/favicon-32x32.png" type="image/x-icon" />
     <title>PEC1 HTMLCSS Tooling</title>
-    <link rel="stylesheet" href="./styles/main.scss" />
+    <style>
+      :root,
+      :host {
+        --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+      }
+
+      :root,
+      :host {
+        --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+      }
+
+      :root,
+      :host {
+        --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+      }
+
+      .st0 {
+        fill: gray;
+      }
+
+      .st1 {
+        fill: #4d4d4d;
+      }
+
+      .st2 {
+        fill: #999;
+      }
+
+      .st3 {
+        fill: #ccc;
+      }
+
+      .st4 {
+        fill: #e6e6e6;
+      }
+
+      .st5 {
+        fill: #666;
+      }
+
+      .st6 {
+        fill: #fff;
+      }
+
+      .st7 {
+        fill: #f2f2f2;
+      }
+
+      .st8 {
+        fill: #f8c09d;
+      }
+
+      .st9 {
+        fill: #1b965b;
+      }
+
+      .st10 {
+        fill: #14844c;
+      }
+
+      .st11 {
+        fill: #1561a0;
+      }
+
+      .st12 {
+        fill: #22b573;
+      }
+
+      .st13 {
+        fill: #065082;
+      }
+
+      .st14 {
+        fill: #f6ae8d;
+      }
+
+      .st15 {
+        fill: #333;
+      }
+
+      .st16 {
+        fill: #ef937e;
+      }
+
+      * {
+        box-sizing: border-box;
+        color: #fff;
+        text-shadow: 0 1px 3px #000;
+        margin: 0;
+        padding: 0;
+        font-family: Nunito, sans-serif;
+      }
+
+      h1 {
+        margin-bottom: 1em;
+        font-size: 4rem;
+        transition: font-size 0.3s;
+      }
+
+      header {
+        z-index: 10;
+        height: 6em;
+        background-image: linear-gradient(#000, #686868);
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3em;
+        transition: all 0.3s;
+        display: flex;
+        position: relative;
+        box-shadow: 0 0 5px 2px #d3d3d3;
+      }
+
+      @media (max-width: 1000px) {
+        header {
+          height: auto;
+          flex-direction: column;
+        }
+      }
+
+      .home-link {
+        height: 50px;
+        width: 500px;
+        display: block;
+      }
+
+      @media (max-width: 1000px) {
+        .home-link {
+          margin-bottom: 1em;
+        }
+      }
+
+      .logo-container {
+        height: 50px;
+        width: 500px;
+        position: relative;
+      }
+
+      .logo-container .runner-logo {
+        filter: invert();
+        animation: runner-move 8s linear infinite;
+        position: absolute;
+        top: -20px;
+      }
+
+      @media (max-width: 1000px) {
+        .logo-container .runner-logo {
+          height: 100px;
+          top: -40px;
+          left: -50px;
+        }
+      }
+
+      .logo-container .text-logo {
+        filter: drop-shadow(0 0 0.15rem orange);
+        transition: all 0.3s;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      @media (max-width: 1000px) {
+        .logo-container .text-logo {
+          height: 45px;
+          margin-left: auto;
+          margin-right: auto;
+          left: -25px;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        .logo-container {
+          margin: 1em auto;
+        }
+      }
+
+      @media (max-width: 670px) {
+        .logo-container {
+          width: 100%;
+          width: 100%;
+          margin-bottom: 1em;
+        }
+      }
+
+      footer .home-link {
+        transform: scale(0.8);
+      }
+
+      ul {
+        justify-content: space-between;
+        display: flex;
+      }
+
+      ul li {
+        list-style: none;
+      }
+
+      ul a {
+        color: #fff;
+        cursor: pointer;
+        margin: 0 1em;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: color 0.5s;
+      }
+
+      @media (max-width: 1000px) {
+        ul a {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        ul {
+          flex-flow: column wrap;
+          align-items: center;
+          padding: 1em;
+        }
+      }
+
+      img.bg {
+        min-height: 100%;
+        width: 100%;
+        height: auto;
+        z-index: -1;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      main {
+        height: calc(100vh - 12em);
+        justify-content: space-between;
+        padding: 4.5em 8em;
+        display: flex;
+      }
+
+      @media (max-width: 1000px) {
+        main {
+          height: auto;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 2em 1em;
+        }
+      }
+
+      .landing-page main {
+        justify-content: space-around;
+      }
+
+      .home-left-content {
+        width: 530px;
+        text-shadow: 0 4px 5px #000;
+        margin-right: 4em;
+      }
+
+      @media (max-width: 1000px) {
+        .home-left-content {
+          width: 400px;
+          text-align: center;
+          text-justify: inter-word;
+          margin: 2em auto;
+          font-size: 0.75rem;
+        }
+      }
+
+      form {
+        width: 320px;
+        color: #fff;
+        text-shadow: 0 1px 2px #000;
+        background-image: linear-gradient(45deg, gray, #fff, gray);
+        border-radius: 30px;
+        flex-direction: column;
+        margin-top: 8em;
+        padding: 2em;
+        display: flex;
+        box-shadow: 0 3px 5px 1px #d3d3d3;
+      }
+
+      form h4,
+      form label,
+      form input[type="text"] {
+        margin-bottom: 1em;
+      }
+
+      form [type="submit"] {
+        width: 100%;
+        color: #fff;
+        background-image: linear-gradient(#000, #686868);
+        border: none;
+        border-radius: 5px;
+        margin-top: 2em;
+        padding: 0.5em 1em;
+      }
+
+      form [type="text"] {
+        color: #000;
+        text-shadow: none;
+        border: none;
+        border-radius: 5px;
+        padding: 1em;
+      }
+
+      form [type="text"]::placeholder {
+        color: #d3d3d3;
+        text-shadow: none;
+      }
+
+      @media (max-width: 1000px) {
+        form {
+          margin-bottom: 4em;
+        }
+      }
+
+      @media (max-width: 670px) {
+        form {
+          width: 100%;
+          margin: 0 0 4em;
+          font-size: 1.5rem;
+        }
+      }
+
+      footer {
+        z-index: 10;
+        height: 6em;
+        color: #fff;
+        background-image: linear-gradient(#686868, #000);
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 4em;
+        display: flex;
+        position: relative;
+        box-shadow: 0 0 5px 2px #d3d3d3;
+      }
+
+      footer .nav-item {
+        box-shadow: none;
+        background-image: none;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+      }
+
+      footer .nav-item a {
+        font-size: 1rem;
+      }
+
+      @media (max-width: 670px) {
+        footer .nav-item a {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        footer {
+          height: auto;
+          flex-direction: column;
+          padding: 2em 4em 1.5em;
+        }
+      }
+
+      #msg-cnt {
+        height: 60px;
+        content: "";
+        opacity: 0;
+        z-index: 5;
+        background-color: #ffb8b8;
+        border-left: 10px solid red;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5em 2em;
+        display: flex;
+        position: fixed;
+        bottom: 50%;
+        left: 0;
+        box-shadow: 0 0 5px 2px #a9a9a9;
+      }
+
+      .front-leg {
+        transform-box: fill-box;
+        animation: front-leg-move 1.5s linear infinite;
+      }
+
+      .rear-leg {
+        transform-origin: 50%;
+        transform-box: fill-box;
+        animation: rear-leg-move 1.5s linear infinite;
+      }
+
+      .sweat {
+        transform-origin: 50%;
+        transform-box: fill-box;
+        animation: sweating 1.5s ease-in-out infinite;
+      }
+
+      img.bg {
+        opacity: 1;
+      }
+    </style>
+    <link rel="preload" href="./styles/main.scss" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="./styles/main.scss" /></noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
