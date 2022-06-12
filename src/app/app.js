@@ -12,6 +12,10 @@ const msgContainer = document.getElementById("msg-cnt");
 
 submitBtn.addEventListener("click", (ev) => {
 
+    if (input_email.value === "" || input_msg.value === "") {
+        return;
+    }
+
     stopAnimation()
     ev.preventDefault()
 

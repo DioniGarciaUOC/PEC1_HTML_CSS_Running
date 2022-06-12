@@ -8022,16 +8022,34 @@ header {
   box-shadow: 0 0 5px 2px #d3d3d3;
 }
 
+header .nav-item a {
+  font-size: 1.25rem;
+}
+
+@media (max-device-width: 1000px) {
+  header .nav-item a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 670px) {
+  header .nav-item a {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 1000px) {
   header {
     height: auto;
     flex-direction: column;
+    padding-top: 1em;
   }
 }
 
 @media (max-device-width: 670px) {
   header {
-    padding-top: 3em;
+    padding: 0;
+    font-size: 2rem;
   }
 }
 
@@ -8055,15 +8073,16 @@ header {
 
 .logo-container .runner-logo {
   filter: invert();
-  animation: runner-move 8s linear infinite;
+  animation: runner-move-desktop 8s linear infinite;
   position: absolute;
-  top: -20px;
+  top: -10px;
 }
 
 @media (max-width: 1000px) {
   .logo-container .runner-logo {
     height: 100px;
-    top: -40px;
+    animation: runner-move-tablet 8s linear infinite;
+    top: -30px;
     left: -50px;
   }
 }
@@ -8071,7 +8090,8 @@ header {
 @media (max-device-width: 670px) {
   .logo-container .runner-logo {
     height: 80px;
-    top: -50px;
+    animation: runner-move-mobile 8s linear infinite;
+    top: -10px;
     left: -40px;
   }
 }
@@ -8379,7 +8399,7 @@ footer .nav-item a {
 
 @media (max-device-width: 1000px) {
   footer .nav-item a {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -8504,7 +8524,24 @@ footer .nav-item a {
   }
 }
 
-@keyframes runner-move {
+@keyframes runner-move-mobile {
+  0% {
+    opacity: .3;
+    transform: translateX(20vw)scale(20%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(50vw)scale(60%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(100vw)scale(20%);
+  }
+}
+
+@keyframes runner-move-tablet {
   0% {
     opacity: .3;
     transform: translateX(0)scale(20%);
@@ -8512,12 +8549,29 @@ footer .nav-item a {
 
   50% {
     opacity: 1;
-    transform: translateX(16em)scale(80%);
+    transform: translateX(40vw)scale(60%);
   }
 
   100% {
     opacity: 0;
-    transform: translateX(28em)scale(10%);
+    transform: translateX(60vw)scale(20%);
+  }
+}
+
+@keyframes runner-move-desktop {
+  0% {
+    opacity: .3;
+    transform: translateX(0)scale(20%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(16em)scale(60%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(25em)scale(20%);
   }
 }
 

@@ -34,14 +34,28 @@ header {
 
   transition: all 0.3s;
 
+  .nav-item {
+    a {
+      font-size: 1.25rem;
+
+      @media (max-device-width: $mq-md-screen) {
+        font-size: 1.5rem;
+      }
+      @media (max-width: $mq-s-screen) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
   @media (max-width: $mq-md-screen) {
+    padding-top: 1em;
     height: auto;
     flex-direction: column;
   }
 
   @media (max-device-width: $mq-s-screen) {
-    padding-top: 3em;
-    //font-size: 2rem;
+    padding: 0;
+    font-size: 2rem;
   }
 }
 
@@ -68,19 +82,21 @@ header {
 
   .runner-logo {
     position: absolute;
-    top: -20px;
-    animation: runner-move linear 8s infinite;
+    top: -10px;
+    animation: runner-move-desktop linear 8s infinite;
     filter: invert(100%);
 
     @media (max-width: $mq-md-screen) {
-      top: -40px;
+      animation: runner-move-tablet linear 8s infinite;
+      top: -30px;
       left: -50px;
       height: 100px;
     }
 
     @media (max-device-width: $mq-s-screen) {
+      animation: runner-move-mobile linear 8s infinite;
       height: 80px;
-      top: -50px;
+      top: -10px;
       left: -40px;
     }
   }
@@ -390,16 +406,14 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //line-height: 2.5rem;
     box-shadow: none;
-
     background-image: none;
 
     a {
       font-size: 1rem;
 
       @media (max-device-width: $mq-md-screen) {
-        font-size: 2rem;
+        font-size: 1.25rem;
       }
       @media (max-width: $mq-s-screen) {
         font-size: 1.5rem;
@@ -532,19 +546,53 @@ footer {
 //       Animación icono corredor logo
 /***********************/
 
-@keyframes runner-move {
+@keyframes runner-move-mobile {
   0% {
-    transform: translateX(0px) scale(20%);
+    transform: translateX(20vw) scale(20%);
     opacity: 0.3;
   }
 
   50% {
-    transform: translateX(16em) scale(80%);
+    transform: translateX(50vw) scale(60%);
     opacity: 1;
   }
 
   100% {
-    transform: translateX(28em) scale(10%);
+    transform: translateX(100vw) scale(20%);
+    opacity: 0;
+  }
+}
+
+@keyframes runner-move-tablet {
+  0% {
+    transform: translateX(0vw) scale(20%);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateX(40vw) scale(60%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(60vw) scale(20%);
+    opacity: 0;
+  }
+}
+
+@keyframes runner-move-desktop {
+  0% {
+    transform: translateX(0em) scale(20%);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateX(16em) scale(60%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(25em) scale(20%);
     opacity: 0;
   }
 }

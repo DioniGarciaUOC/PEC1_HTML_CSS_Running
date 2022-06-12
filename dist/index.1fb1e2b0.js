@@ -5,6 +5,7 @@ const input_msg = document.getElementById("msg-txt");
 // div messaging
 const msgContainer = document.getElementById("msg-cnt");
 submitBtn.addEventListener("click", (ev)=>{
+    if (input_email.value === "" || input_msg.value === "") return;
     stopAnimation();
     ev.preventDefault();
     msgContainer.textContent = input_email.value + ": '" + input_msg.value + "'";
