@@ -8013,7 +8013,6 @@ header {
   z-index: 10;
   height: 6em;
   background-image: linear-gradient(#000, #686868);
-  border: 4px solid pink;
   justify-content: space-between;
   align-items: center;
   padding: 0 3em;
@@ -8645,6 +8644,12 @@ footer .nav-item a {
   margin-bottom: .5em;
 }
 
+@media (max-width: 670px) {
+  .about-me .personal-info p {
+    font-size: 1.25rem;
+  }
+}
+
 .about-me .erik-photo {
   width: 280px;
   height: 280px;
@@ -8728,7 +8733,7 @@ footer .nav-item a {
     min-width: 130%;
     width: 130%;
     padding: 1em;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -8899,6 +8904,12 @@ img.bg {
   display: inline-flex;
 }
 
+@media (max-device-width: 670px) {
+  .contenedor-maratones {
+    width: 140%;
+  }
+}
+
 .maraton-titulo {
   justify-content: space-around;
   align-items: center;
@@ -8910,8 +8921,20 @@ img.bg {
   font-size: 2.2rem;
 }
 
+@media (max-width: 670px) {
+  .maraton-titulo h2 {
+    font-size: 2rem;
+  }
+}
+
 .maraton-titulo span {
   font-size: 1.5rem;
+}
+
+@media (max-width: 670px) {
+  .maraton-titulo span {
+    font-size: 1.2rem;
+  }
 }
 
 hr {
@@ -8934,9 +8957,9 @@ hr {
   display: flex;
 }
 
-@media (max-device-width: 670px) {
+@media (max-width: 670px) {
   .dashboard-up {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -8954,7 +8977,7 @@ table td {
 
 @media (max-device-width: 670px) {
   table {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -9113,23 +9136,10 @@ h1 {
   border-radius: 8px 8px 0 0;
 }
 
-@media (max-device-width: 670px) {
-  .gallery-block .picture-item-image {
-    min-height: 580px;
-    width: 100%;
-  }
-}
-
 .gallery-block .picture-item-name {
   margin: .25em 0 0;
   font-size: 1.4rem;
   font-weight: 600;
-}
-
-@media (max-device-width: 670px) {
-  .gallery-block .picture-item-name {
-    font-size: 1.8rem;
-  }
 }
 
 .gallery-block .picture-item-tag {
@@ -9137,34 +9147,11 @@ h1 {
   font-size: .9em;
 }
 
-@media (max-device-width: 670px) {
-  .gallery-block .picture-item-tag {
-    font-size: 1.5rem;
-  }
-}
-
 .gallery-block .picture-item-info {
   max-width: 320px;
   text-align: center;
   margin-top: 4px;
   font-size: .8em;
-}
-
-@media (max-device-width: 670px) {
-  .gallery-block .picture-item {
-    height: 680px;
-    max-width: 580px;
-    margin-bottom: 12em;
-  }
-}
-
-@media (max-device-width: 670px) {
-  .gallery-block {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em 0;
-  }
 }
 
 .art-imagen-destacada h2 {
@@ -9311,7 +9298,7 @@ aside a:hover {
 
 @media (max-device-width: 670px) {
   aside a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -9325,6 +9312,7 @@ aside a:hover {
   aside {
     width: 100%;
     height: auto;
+    padding: 1em;
     font-size: 1.5rem;
   }
 }

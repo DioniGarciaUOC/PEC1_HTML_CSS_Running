@@ -27,7 +27,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  //outline: 2px solid red;
 
   padding: 4em 0;
 
@@ -51,11 +50,6 @@ h1 {
 
       object-fit: cover;
       border-radius: 8px 8px 0 0;
-
-      @media (max-device-width: $mq-s-screen) {
-        min-height: 580px;
-        width: 100%;
-      }
     }
 
     &-name {
@@ -63,20 +57,12 @@ h1 {
 
       font-size: 1.4rem;
       font-weight: 600;
-
-      @media (max-device-width: $mq-s-screen) {
-        font-size: 1.8rem;
-      }
     }
 
     &-tag {
       margin-bottom: 4px;
 
       font-size: 0.9em;
-
-      @media (max-device-width: $mq-s-screen) {
-        font-size: 1.5rem;
-      }
     }
 
     &-info {
@@ -86,21 +72,6 @@ h1 {
 
       text-align: center;
     }
-
-    @media (max-device-width: $mq-s-screen) {
-      height: 680px;
-      max-width: 580px;
-
-      margin-bottom: 12em;
-    }
-  }
-
-  @media (max-device-width: $mq-s-screen) {
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-    padding: 2em 0;
   }
 }
 
@@ -245,7 +216,7 @@ aside {
     }
 
     @media (max-device-width: $mq-s-screen) {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
   }
 
@@ -254,6 +225,7 @@ aside {
   }
 
   @media (max-device-width: $mq-s-screen) {
+    padding: 1em;
     width: 100%;
     height: auto;
 

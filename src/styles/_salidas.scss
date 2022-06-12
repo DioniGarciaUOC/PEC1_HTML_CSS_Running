@@ -69,6 +69,10 @@ img.bg {
   align-items: center;
 
   width: 100%;
+
+  @media (max-device-width: $mq-s-screen) {
+    width: 140%;
+  }
 }
 
 .maraton-titulo {
@@ -80,10 +84,16 @@ img.bg {
 
   h2 {
     font-size: 2.2rem;
+    @media (max-width: $mq-s-screen) {
+      font-size: 2rem;
+    }
   }
 
   span {
     font-size: 1.5rem;
+    @media (max-width: $mq-s-screen) {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -108,8 +118,8 @@ hr {
     width: 170px;
   }
 
-  @media (max-device-width: $mq-s-screen) {
-    font-size: 1.4rem;
+  @media (max-width: $mq-s-screen) {
+    font-size: 1.2rem;
   }
 }
 
@@ -126,7 +136,7 @@ table {
   }
 
   @media (max-device-width: $mq-s-screen) {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 }
 

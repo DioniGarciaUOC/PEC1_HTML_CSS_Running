@@ -20,7 +20,6 @@ h1 {
 }
 
 header {
-  border: 4px solid pink;
   position: relative;
   z-index: 10;
   display: flex;
@@ -136,7 +135,6 @@ footer .home-link {
 /*  NAV-LINKS                   **/
 /********************************/
 ul {
-  //border: 2px solid red; //REMOVEME
   display: flex;
   justify-content: space-between;
 
@@ -199,7 +197,6 @@ img.bg {
 /********************************/
 
 main {
-  //border: 8px solid purple; //REMOVEME
   display: flex;
   height: calc(100vh - 12em);
   justify-content: space-between;
