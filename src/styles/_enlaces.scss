@@ -7,7 +7,7 @@
 .pagina-enlaces main {
   flex-direction: column;
   margin-bottom: 0em;
-  height: auto;
+  min-height: calc(100vh - 6em);
 }
 
 .reference {

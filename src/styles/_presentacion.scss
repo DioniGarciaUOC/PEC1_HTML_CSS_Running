@@ -127,9 +127,11 @@
     padding: 1em 3em;
   }
 
-  @media (max-device-width: $mq-s-screen) {
-    min-width: 100%;
+  @media (max-width: $mq-s-screen) {
+    min-width: 130%;
+    width: 130%;
     font-size: 1.8rem;
+    padding: 1em 1em;
   }
 }
 
